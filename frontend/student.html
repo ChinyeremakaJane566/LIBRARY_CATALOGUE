@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="../frontend/css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div>Student Dashboard</div>
+    <div>
+      <span id="studentGreet"></span>
+      <button id="viewCartBtn" class="action-btn">Cart (<span id="cartCount">0</span>)</button>
+      <button id="logoutStudent" class="action-btn outline">Logout</button>
+    </div>
+  </header>
+
+  <main class="student-main">
+    <section class="card" style="flex:1">
+      <div class="search-row">
+        <input id="searchBox" placeholder="Search by title or author">
+        <select id="categoryFilter"><option value="">All categories</option></select>
+      </div>
+
+      <div id="booksGrid" class="books-grid" style="margin-top:12px"></div>
+    </section>
+
+    <aside style="width:360px">
+      <div class="card">
+        <h4>Cart</h4>
+        <div id="cartList">Your cart is empty.</div>
+        <div style="margin-top:10px">
+          <button id="placeOrderBtn" class="action-btn">Place Order (Pay on collection)</button>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:12px">
+        <h4>Borrowed</h4>
+        <div id="borrowList">You have no borrowed books.</div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="js/storage.js"></script>
+  <script src="js/books.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>

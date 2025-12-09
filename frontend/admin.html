@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="../frontend/css/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="top-left">Admin Dashboard</div>
+    <div class="top-right">
+      <span id="adminGreet"></span>
+      <button id="adminLogout" class="action-btn outline">Logout</button>
+    </div>
+  </header>
+
+  <main class="admin-main">
+    <aside class="admin-aside">
+      <button id="navBooks" class="action-btn">Books</button>
+      <button id="navBorrowHistory" class="action-btn">Borrow History</button>
+      <button id="navOrders" class="action-btn">Orders</button>
+      <button id="resetData" class="action-btn outline">Reset Sample Data</button>
+    </aside>
+
+    <section class="admin-content">
+      <div id="booksSection" class="card">
+        <h3>Manage Books</h3>
+        <form id="bookForm" class="form-inline">
+          <input id="bookTitle" placeholder="Title" required>
+          <input id="bookAuthor" placeholder="Author" required>
+          <input id="bookISBN" placeholder="ISBN">
+          <input id="bookCategory" placeholder="Category">
+          <input id="bookCopies" type="number" min="1" value="1" placeholder="Copies">
+          <input id="bookPrice" type="number" min="0" value="0" placeholder="Price (GHS)">
+          <div class="form-actions" style="margin-top:8px">
+            <button id="saveBook" class="action-btn">Save</button>
+            <button id="cancelEdit" class="action-btn outline" type="button" style="display:none">Cancel Edit</button>
+          </div>
+        </form>
+
+        <div id="adminBooksList" style="margin-top:14px"></div>
+      </div>
+
+      <div id="borrowHistorySection" class="card" style="display:none">
+        <h3>Borrow History</h3>
+        <div id="borrowHistoryList"></div>
+      </div>
+
+      <div id="ordersSection" class="card" style="display:none">
+        <h3>Orders History</h3>
+        <div id="ordersList"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">Admin Panel — Local storage demo</footer>
+
+  <script src="js/storage.js"></script>
+  <script src="js/books.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/ui.js"></script>
+</body>
+</html>

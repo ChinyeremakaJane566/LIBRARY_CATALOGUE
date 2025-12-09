@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Register — Library</title>
+  <link rel="stylesheet" href="../frontend/css/styles.css">
+</head>
+<body>
+  <div class="panel">
+    <h2>Register (Students)</h2>
+    <form id="regForm" class="form">
+      <label>Full name</label>
+      <input id="regName" type="text" required>
+      <label>Username / Email</label>
+      <input id="regUsername" type="text" required>
+      <label>Password</label>
+      <input id="regPassword" type="password" required>
+      <div class="form-actions">
+        <button type="submit" class="action-btn">Register</button>
+        <a href="index.html" class="action-btn outline">Home</a>
+      </div>
+    </form>
+  </div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>
